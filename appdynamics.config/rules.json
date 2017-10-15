@@ -1,0 +1,298 @@
+{
+  "controllerUrl" : "http://localhost:8090",
+  "applicationId" : 14,
+  "tierId" : null,
+  "user" : "admin",
+  "createdDate" : [ "java.util.Date", 1508098404632 ],
+  "entityType" : "rules",
+  "entities" : [ "java.util.ArrayList", [ [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"082dc8c5-0c2f-42e7-bcc3-9940738e85e8\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Weblogic JAX RPC Servlets\",\"description\": \"Weblogic JAX RPC Servlets\",\"createdBy\": \"system\",\"createdOn\": 1507306991090,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991774},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"STARTS_WITH\",\"matchStrings\": [\"weblogic.wsee.server.servlet.\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"097d1384-5f61-4b33-a773-f454a320de01\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Akka ActorRef\",\"description\": \"\",\"createdBy\": \"admin\",\"createdOn\": 1507318992501,\"updatedBy\": \"admin\",\"updatedOn\": 1507318992501},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"INCLUDE\",\"txEntryPointType\": \"POJO\",\"matchConditions\": [{\"type\": \"INSTRUMENTATION_PROBE\",\"instrumentionProbe\": {\"javaDefinition\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"akka.actor.ActorRef\"]}},\"methodMatch\": {\"methodNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"tell\"]}}}}}],\"actions\": [{\"type\": \"POJO_SPLIT\",\"pojoSplit\": {\"advancedSplitConfig\": [{\"splitOperationType\": 2,\"splitOperation\": \"path()\"}]}}],\"properties\": [{\"type\": \"BOOLEAN\",\"name\": \"BACKGROUND_TASK\",\"booleanValue\": false}]},\"agentType\": \"APPLICATION_SERVER\"}}}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"10e6d7d8-f193-4b06-a3b8-e5906522253f\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Quartz\",\"description\": \"Quartz\",\"createdBy\": \"system\",\"createdOn\": 1507306990904,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991455},\"enabled\": false,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"INCLUDE\",\"txEntryPointType\": \"POJO\",\"matchConditions\": [{\"type\": \"INSTRUMENTATION_PROBE\",\"instrumentionProbe\": {\"javaDefinition\": {\"classMatch\": {\"type\": \"IMPLEMENTS_INTERFACE\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.quartz.Job\"],\"isNot\": false}},\"methodMatch\": {\"methodNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"execute\"],\"isNot\": false}}}}}],\"actions\": [{\"type\": \"POJO_SPLIT\",\"pojoSplit\": {\"basicSplitConfig\": {\"splitOperationType\": 0},\"advancedSplitConfig\": [{\"splitOperationType\": 4}]}}],\"properties\": [{\"type\": \"BOOLEAN\",\"name\": \"POJO_BACKUP\",\"booleanValue\": true}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"1d7b4e7b-d1d4-4a32-a701-fe4f6fdb69ad\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Python Static Content Filter\",\"description\": \"Python Static Content Filter\",\"createdBy\": \"system\",\"createdOn\": 1507306991946,\"updatedBy\": \"system\",\"updatedOn\": 1507306991946},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"PYTHON_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"PYTHON_WEB\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"httpMethod\": \"GET\",\"uri\": {\"type\": \"MATCHES_REGEX\",\"matchStrings\": [\"robots.txt|.*\\\\.(js|css|png|gif|jpg|jpeg|ico)$\"],\"isNot\": false}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"PYTHON_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"20963fdb-8ff8-4d0e-8d89-fae5040d32d3\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"CometD Annotation Servlet\",\"description\": \"CometD Annotation Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306990873,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991549},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.cometd.annotation.AnnotationCometdServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"2ac39fa6-12a8-40b3-a04b-342e87471266\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"ASP.NET WebService Script Handler\",\"description\": \"ASP.NET WebService Script Handler\",\"createdBy\": \"system\",\"createdOn\": 1507306990776,\"updatedBy\": \"system\",\"updatedOn\": 1507306990776},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"DOT_NET_APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"ASP_DOTNET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"IS_IN_LIST\",\"matchStrings\": [\"System.Web.Script.Services.ScriptHandlerFactory+HandlerWrapper\",\"System.Web.Script.Services.ScriptHandlerFactory+HandlerWrapperWithSession\",\"System.Web.Script.Services.ScriptHandlerFactory+AsyncHandlerWrapper\",\"System.Web.Script.Services.ScriptHandlerFactory+AsyncHandlerWrapperWithSession\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"DOT_NET_APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"30432c03-6425-4e42-b27d-e0caa94dfd6c\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"JAX WS RI Dispatcher Servlet\",\"description\": \"JAX WS RI Dispatcher Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991738,\"updatedBy\": \"admin\",\"updatedOn\": 1507318992041},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"com.sun.xml.ws.transport.http.servlet.WSServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"479205e3-3767-4080-9276-b32a495112d4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"JBoss 6.x web-services Servlet\",\"description\": \"JBoss 6.x web-services Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991766,\"updatedBy\": \"admin\",\"updatedOn\": 1507318992067},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.jboss.wsf.spi.deployment.WSFServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"47df1f21-7ef7-4085-baa1-6f2a3ac2de28\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Weblogic JAX WS Webservice Servlet\",\"description\": \"Weblogic JAX WS Webservice Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991791,\"updatedBy\": \"admin\",\"updatedOn\": 1507318992104},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"weblogic.wsee.jaxws.JAXWSServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"4840970e-cbe9-42d4-99d5-80e5b1cf9ad0\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Spring WS - dispatching of Web service messages\",\"description\": \"Spring WS - dispatching of Web service messages\",\"createdBy\": \"system\",\"createdOn\": 1507306991279,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991795},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.springframework.ws.transport.http.MessageDispatcherServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"49ec557f-d94b-4049-aa02-6e06fb3ac20a\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Akka Actors\",\"description\": \"Akka\",\"createdBy\": \"admin\",\"createdOn\": 1507307268435,\"updatedBy\": \"admin\",\"updatedOn\": 1507332016298},\"enabled\": true,\"priority\": 0,\"version\": 9,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"INCLUDE\",\"txEntryPointType\": \"POJO\",\"matchConditions\": [{\"type\": \"INSTRUMENTATION_PROBE\",\"instrumentionProbe\": {\"javaDefinition\": {\"classMatch\": {\"type\": \"IMPLEMENTS_INTERFACE\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"akka.actor.Actor\"]}},\"methodMatch\": {\"methodNameCondition\": {\"type\": \"IS_NOT_EMPTY\",\"matchStrings\": [\"aroundReceive\"]}}}}}],\"actions\": [{\"type\": \"POJO_SPLIT\",\"pojoSplit\": {\"advancedSplitConfig\": [{\"splitOperationType\": 2,\"splitOperation\": \"self().path()\"},{\"splitOperationType\": 6}],\"excludes\": {\"type\": \"CONTAINS\",\"matchStrings\": [\"websockets\"]}}}],\"properties\": [{\"type\": \"BOOLEAN\",\"name\": \"BACKGROUND_TASK\",\"booleanValue\": false}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"5449c9e8-33cb-4860-ad1b-37f7c2533f60\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \".NET Auto Discovery Rule\",\"description\": \".NET Auto Discovery Rule\",\"createdBy\": \"system\",\"createdOn\": 1507306991401,\"updatedBy\": \"system\",\"updatedOn\": 1507306991401},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"DOT_NET_APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"AUTOMATIC_DISCOVERY\",\"txAutoDiscoveryRule\": {\"autoDiscoveryConfigs\": [{\"txEntryPointType\": \"ASP_DOTNET\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"URI\",\"httpAutoDiscovery\": {\"partURISegments\": {\"type\": \"FIRST\",\"numSegments\": 2}}},{\"txEntryPointType\": \"DOTNET_REMOTING\",\"monitoringEnabled\": true,\"discoveryEnabled\": false,\"namingSchemeType\": \"SIMPLE_CLASS_NAME_AND_METHOD_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"ASP_DOTNET_WEB_SERVICE\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"SERVICE_NAME_AND_OPERATION_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"WCF\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"SERVICE_NAME_AND_OPERATION_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"DOTNET_JMS\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"DESTINATION_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"POCO\",\"monitoringEnabled\": true,\"discoveryEnabled\": false,\"namingSchemeType\": \"SIMPLE_CLASS_NAME_AND_METHOD_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}}]},\"agentType\": \"DOT_NET_APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"54d119f1-d686-471b-99da-d2aff6edc202\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Jersey 2.x Servlet\",\"description\": \"Jersey 2.x Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306990804,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991483},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.glassfish.jersey.servlet.ServletContainer\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"6047c4a1-7f50-4c07-a0bd-2de48528c292\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Java Auto Discovery Rule\",\"description\": \"Java Auto Discovery Rule\",\"createdBy\": \"system\",\"createdOn\": 1507306991170,\"updatedBy\": \"admin\",\"updatedOn\": 1507330364436},\"enabled\": true,\"priority\": 1,\"version\": 5,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"AUTOMATIC_DISCOVERY\",\"txAutoDiscoveryRule\": {\"autoDiscoveryConfigs\": [{\"txEntryPointType\": \"BINARY_REMOTING\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"SIMPLE_CLASS_NAME_AND_METHOD_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"SERVLET\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"URI\",\"httpAutoDiscovery\": {\"useFullURI\": false,\"partURISegments\": {\"type\": \"FIRST\",\"numSegments\": 2},\"namingConfiguration\": {},\"enableServletFilterDetection\": false}},{\"txEntryPointType\": \"STRUTS_ACTION\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"ACTION_NAME_AND_METHOD_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"SPRING_BEAN\",\"monitoringEnabled\": true,\"discoveryEnabled\": false,\"namingSchemeType\": \"BEAN_ID_AND_METHOD_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"EJB\",\"monitoringEnabled\": true,\"discoveryEnabled\": false,\"namingSchemeType\": \"EJB_NAME_AND_METHOD_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"POJO\",\"monitoringEnabled\": true,\"discoveryEnabled\": false,\"namingSchemeType\": \"FULLY_QUALIFIED_CLASS_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"JMS\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"DESTINATION_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"WEB_SERVICE\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"SERVICE_NAME_AND_OPERATION_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"6acb23cf-d5fe-479d-b58d-811170197b83\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Jersey Servlet\",\"description\": \"Jersey Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991970,\"updatedBy\": \"admin\",\"updatedOn\": 1507318992250},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"com.sun.jersey.spi.container.servlet.ServletContainer\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"7264250e-9f56-45b9-a6a9-02cb7f99e62a\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Websphere web-services Servlet\",\"description\": \"Websphere web-services Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306990846,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991522},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"com.ibm.ws.webservices.engine.transport.http.WebServicesServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"76c6a1fa-1775-441d-bfe2-7035239c929f\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"NodeJS Static Content Filter\",\"description\": \"NodeJS Static Content Filter\",\"createdBy\": \"system\",\"createdOn\": 1507306991895,\"updatedBy\": \"system\",\"updatedOn\": 1507306991895},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"NODE_JS_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"NODEJS_WEB\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"httpMethod\": \"GET\",\"uri\": {\"type\": \"MATCHES_REGEX\",\"matchStrings\": [\"robots.txt|.*\\\\.(js|css|png|gif|jpg|jpeg|ico)$\"],\"isNot\": false}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"NODE_JS_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"77a8c0fb-b927-4b4c-84a6-e4c6c743fdf3\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Websphere web-services axis Servlet\",\"description\": \"Websphere web-services axis Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991925,\"updatedBy\": \"admin\",\"updatedOn\": 1507318992184},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"com.ibm.ws.websvcs.transport.http.WASAxis2Servlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"81521191-d57d-4155-9f76-565befa430ef\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"ActorRef\",\"description\": \"\",\"createdBy\": \"admin\",\"createdOn\": 1507319416198,\"updatedBy\": \"admin\",\"updatedOn\": 1507321379026},\"enabled\": false,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"INCLUDE\",\"txEntryPointType\": \"POJO\",\"matchConditions\": [{\"type\": \"INSTRUMENTATION_PROBE\",\"instrumentionProbe\": {\"javaDefinition\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"akka.actor.ActorRef\"]}},\"methodMatch\": {\"methodNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"tell\"]}}}}}],\"actions\": [{\"type\": \"POJO_SPLIT\",\"pojoSplit\": {\"advancedSplitConfig\": [{\"splitOperationType\": 2,\"splitOperation\": \"path()\"}]}}],\"properties\": [{\"type\": \"BOOLEAN\",\"name\": \"BACKGROUND_TASK\",\"booleanValue\": false}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"8300055c-708d-4cb0-9b73-cbb320739126\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Weblogic JAX WS Servlet\",\"description\": \"Weblogic JAX WS Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306990964,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991705},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"weblogic.wsee.jaxws.JAXWSWebAppServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"8e4589b2-856e-4778-b3b0-0983ce198f3e\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Apache Axis2 Servlet\",\"description\": \"Apache Axis2 Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306992015,\"updatedBy\": \"admin\",\"updatedOn\": 1507318992337},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.apache.axis2.transport.http.AxisServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"8f49b273-1661-4538-aa4a-6ad783cf2010\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"ASP.NET MVC5 Resource Handler\",\"description\": \"ASP.NET MVC5 Resource Handler\",\"createdBy\": \"system\",\"createdOn\": 1507306991870,\"updatedBy\": \"system\",\"updatedOn\": 1507306991870},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"DOT_NET_APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"ASP_DOTNET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"System.Web.Optimization.BundleHandler\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"DOT_NET_APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"96949d4d-6201-42e7-b411-f9181c30aa85\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Web Server Auto Discovery Rule\",\"description\": \"Web Server Auto Discovery Rule\",\"createdBy\": \"system\",\"createdOn\": 1507306991497,\"updatedBy\": \"system\",\"updatedOn\": 1507306991497},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"NATIVE_WEB_SERVER\",\"txMatchRule\": {\"type\": \"AUTOMATIC_DISCOVERY\",\"txAutoDiscoveryRule\": {\"autoDiscoveryConfigs\": [{\"txEntryPointType\": \"WEB\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"URI\",\"httpAutoDiscovery\": {\"partURISegments\": {\"type\": \"FIRST\",\"numSegments\": 2}}}]},\"agentType\": \"NATIVE_WEB_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"9a071bea-10af-427d-ba77-6342ebcc3c26\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"ASP.NET WebService Session Handler\",\"description\": \"ASP.NET WebService Session Handler\",\"createdBy\": \"system\",\"createdOn\": 1507306991334,\"updatedBy\": \"system\",\"updatedOn\": 1507306991334},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"DOT_NET_APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"ASP_DOTNET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"System.Web.Services.Protocols.SyncSessionlessHandler\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"DOT_NET_APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"a20efe38-f348-4404-8a9e-e3f5427185cc\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Python Auto Discovery Rule\",\"description\": \"Python Auto Discovery Rule\",\"createdBy\": \"system\",\"createdOn\": 1507306991236,\"updatedBy\": \"system\",\"updatedOn\": 1507306991236},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"PYTHON_SERVER\",\"txMatchRule\": {\"type\": \"AUTOMATIC_DISCOVERY\",\"txAutoDiscoveryRule\": {\"autoDiscoveryConfigs\": [{\"txEntryPointType\": \"PYTHON_WEB\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"URI\",\"httpAutoDiscovery\": {\"partURISegments\": {\"type\": \"FIRST\",\"numSegments\": 2}}}]},\"agentType\": \"PYTHON_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"aa614cb2-e33a-4b97-85e7-e9b9c6de9a70\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"JBoss web-services servlet\",\"description\": \"JBoss web-services servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991990,\"updatedBy\": \"admin\",\"updatedOn\": 1507318992284},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.jboss.wsf.stack.jbws.EndpointServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"b22ce7df-5954-4e01-a53d-291ce92be4c2\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"ASP.NET WCF Activation Handler\",\"description\": \"ASP.NET WCF Activation Handler\",\"createdBy\": \"system\",\"createdOn\": 1507306991004,\"updatedBy\": \"system\",\"updatedOn\": 1507306991004},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"DOT_NET_APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"ASP_DOTNET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"System.ServiceModel.Activation.HttpHandler\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"DOT_NET_APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"b3683535-f932-419d-acd9-efa8fa7cb477\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Apache Axis2 Admin Servlet\",\"description\": \"Apache Axis2 Admin Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991047,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991748},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.apache.axis2.transport.http.AxisAdminServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"c1d45816-0c82-4ebf-89e7-a2a29adb2c83\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Struts Action Servlet\",\"description\": \"Struts Action Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306990938,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991661},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.apache.struts.action.ActionServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"c1e1aacb-fb13-4bb7-8edc-5e096249b428\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"XFire web-services servlet\",\"description\": \"XFire web-services servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991649,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991963},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.codehaus.xfire.transport.http.XFireConfigurableServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"d3ae290f-168d-4f98-802e-4584520d7466\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"ActorCell\",\"description\": \"Cell\",\"createdBy\": \"admin\",\"createdOn\": 1507329723781,\"updatedBy\": \"admin\",\"updatedOn\": 1507331657915},\"enabled\": false,\"priority\": 0,\"version\": 2,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"INCLUDE\",\"txEntryPointType\": \"POJO\",\"matchConditions\": [{\"type\": \"INSTRUMENTATION_PROBE\",\"instrumentionProbe\": {\"javaDefinition\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"akka.actor.ActorCell\"]}},\"methodMatch\": {\"methodNameCondition\": {\"type\": \"IS_NOT_EMPTY\",\"matchStrings\": [\"sendMessage\"]}}}}}],\"actions\": [{\"type\": \"POJO_SPLIT\",\"pojoSplit\": {\"advancedSplitConfig\": [{\"splitOperationType\": 2,\"splitOperation\": \"self().path()\"}]}}],\"properties\": [{\"type\": \"BOOLEAN\",\"name\": \"BACKGROUND_TASK\",\"booleanValue\": false}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"d4c58c82-21bb-43b5-9e60-f0a92984eac5\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"CometD Servlet\",\"description\": \"CometD Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991702,\"updatedBy\": \"admin\",\"updatedOn\": 1507318992011},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.cometd.server.CometdServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"d6f177ac-d44a-4a1d-8a67-682d75bce8d7\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Spring WS - Base servlet for Spring's web framework\",\"description\": \"Spring WS - Base servlet for Spring's web framework\",\"createdBy\": \"system\",\"createdOn\": 1507306991533,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991880},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.springframework.web.servlet.FrameworkServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"e7d73330-3b65-4f2b-87af-3c417647605b\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Php Auto Discovery Rule\",\"description\": \"Php Auto Discovery Rule\",\"createdBy\": \"system\",\"createdOn\": 1507306991616,\"updatedBy\": \"system\",\"updatedOn\": 1507306991616},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"PHP_APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"AUTOMATIC_DISCOVERY\",\"txAutoDiscoveryRule\": {\"autoDiscoveryConfigs\": [{\"txEntryPointType\": \"PHP_WEB\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"URI\",\"httpAutoDiscovery\": {\"partURISegments\": {\"type\": \"FIRST\",\"numSegments\": 2}}},{\"txEntryPointType\": \"PHP_MVC\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"ACTION_CLASS_NAME_AND_METHOD_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"PHP_DRUPAL\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"DEFAULT\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"PHP_WORDPRESS\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"DEFAULT\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"PHP_CLI\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"DEFAULT\",\"httpAutoDiscovery\": {\"useFullURI\": true}},{\"txEntryPointType\": \"PHP_WEB_SERVICE\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"SERVICE_NAME_AND_OPERATION_NAME\",\"httpAutoDiscovery\": {\"useFullURI\": true}}]},\"agentType\": \"PHP_APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"f5e8e110-04d4-48ad-969c-52bad9913d37\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Apache Axis Servlet\",\"description\": \"Apache Axis Servlet\",\"createdBy\": \"system\",\"createdOn\": 1507306991306,\"updatedBy\": \"admin\",\"updatedOn\": 1507318991833},\"enabled\": true,\"priority\": 0,\"version\": 1,\"agentType\": \"APPLICATION_SERVER\",\"txMatchRule\": {\"type\": \"CUSTOM\",\"txCustomRule\": {\"type\": \"EXCLUDE\",\"txEntryPointType\": \"SERVLET\",\"matchConditions\": [{\"type\": \"HTTP\",\"httpMatch\": {\"classMatch\": {\"type\": \"MATCHES_CLASS\",\"classNameCondition\": {\"type\": \"EQUALS\",\"matchStrings\": [\"org.apache.axis.transport.http.AxisServlet\"],\"isNot\": false}}}}],\"actions\": [{\"type\": \"HTTP_SPLIT\",\"httpSplit\": {}}]},\"agentType\": \"APPLICATION_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ], [ "com.appdynamics.tools.vo.config.MdsRuleWrapper", {
+    "id" : 0,
+    "version" : 0,
+    "name" : null,
+    "nameUnique" : true,
+    "jsonStr$$" : "{\"rule\": {\"type\": \"TX_MATCH_RULE\",\"summary\": {\"id\": \"f79988e0-3b80-49ef-b727-d6bfd5027c96\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigRuleEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Node.js Auto Discovery Rule\",\"description\": \"Node.js Auto Discovery Rule\",\"createdBy\": \"system\",\"createdOn\": 1507306991845,\"updatedBy\": \"system\",\"updatedOn\": 1507306991845},\"enabled\": true,\"priority\": 0,\"version\": 0,\"agentType\": \"NODE_JS_SERVER\",\"txMatchRule\": {\"type\": \"AUTOMATIC_DISCOVERY\",\"txAutoDiscoveryRule\": {\"autoDiscoveryConfigs\": [{\"txEntryPointType\": \"NODEJS_WEB\",\"monitoringEnabled\": true,\"discoveryEnabled\": true,\"namingSchemeType\": \"URI\",\"httpAutoDiscovery\": {\"partURISegments\": {\"type\": \"FIRST\",\"numSegments\": 2}}}]},\"agentType\": \"NODE_JS_SERVER\"}},\"scopeSummaries\": [{\"id\": \"c5bf9cf0-bb30-45ca-bc7e-0e80875870f4\",\"type\": \"com.appdynamics.platform.services.configuration.impl.persistenceapi.model.ConfigScopeEntity\",\"accountId\": \"07a801fe-c3a2-4ac4-b04c-86a9157f6d46\",\"name\": \"Default Scope\"}]}",
+    "ruleMapping" : null,
+    "idStr" : null
+  } ] ] ],
+  "metatdata" : null
+}
