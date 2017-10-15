@@ -1,0 +1,4 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/david/appdynamics/scala/activator-play-cluster-sample/frontend/conf/prod.conf,/home/david/appdynamics/scala/activator-play-cluster-sample/frontend/target/scala-2.11/classes/prod.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/david/appdynamics/scala/activator-play-cluster-sample/frontend/conf/application.conf,/home/david/appdynamics/scala/activator-play-cluster-sample/frontend/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/david/appdynamics/scala/activator-play-cluster-sample/frontend/conf/routes,/home/david/appdynamics/scala/activator-play-cluster-sample/frontend/target/scala-2.11/classes/routes)[0m

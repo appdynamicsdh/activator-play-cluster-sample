@@ -1,0 +1,48 @@
+body {
+  margin-top: 40px;
+}
+.basics-nav {
+  background-color: #7ece25;
+}
+.basics-nav .navbar-brand {
+  color: #e3ffc7;
+}
+.basics-nav .navbar-nav li a {
+  color: #e3ffc7;
+}
+.basics-nav .navbar-nav .dropdown-menu a {
+  color: #000;
+}
+/* AngularJS */
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none;
+}
+.jumobtron {
+  background-color: gainsboro;
+}
+/* Charts */
+.barchart .bar {
+  fill: #222222;
+}
+.barchart .bar:hover {
+  opacity: 0.9;
+}
+.barchart .bar-text {
+  fill: white;
+}
+.barchart .domain {
+  fill: white;
+}
+/* sticky footer: http://getbootstrap.com/examples/sticky-footer-navbar/ */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+/*# sourceMappingURL=main.css.map */

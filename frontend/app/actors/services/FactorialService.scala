@@ -4,6 +4,8 @@ import akka.actor._
 import akka.routing.FromConfig
 import akka.cluster.Cluster
 import api.FactorialService._
+import api.MyMessageQueue
+import kamon.Kamon
 
 /**
  * The connection point between frontend and  cluster
@@ -27,6 +29,7 @@ object FactorialService {
    * Startup the service only if the cluster has the specified size
    */
   def startOn(system: ActorSystem) {
+    Kamon.start()
     Cluster(system) registerOnMemberUp {
       val service = system.actorOf(Props[FactorialService], name = "factorialService")
       system.log info s"Factorial Service started at ${service.path}"

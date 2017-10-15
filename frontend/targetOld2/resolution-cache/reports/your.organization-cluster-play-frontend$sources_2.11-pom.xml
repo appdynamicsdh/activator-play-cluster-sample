@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="your.organization"
+		module="cluster-play-frontend$sources_2.11"
+		revision="2.4.20"
+		conf="pom"
+		confs="compile, runtime, test, provided, optional, aspectj-runner, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20171015131851"/>
+	<dependencies>
+	</dependencies>
+</ivy-report>

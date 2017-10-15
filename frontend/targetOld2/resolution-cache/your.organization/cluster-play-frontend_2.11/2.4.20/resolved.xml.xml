@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="your.organization"
+		module="cluster-play-frontend_2.11"
+		revision="2.4.20"
+		status="integration"
+		publication="20171005205038"
+	>
+		<description>
+		cluster-play-frontend
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		<conf name="aspectj-runner" visibility="public" description=""/>
+		<conf name="compile-internal" visibility="private" description="" extends="compile,optional,provided"/>
+		<conf name="runtime-internal" visibility="private" description="" extends="runtime,optional"/>
+		<conf name="test-internal" visibility="private" description="" extends="test,optional,provided"/>
+		<conf name="plugin" visibility="private" description=""/>
+		<conf name="sources" visibility="public" description=""/>
+		<conf name="docs" visibility="private" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		<conf name="scala-tool" visibility="private" description=""/>
+	</configurations>
+	<publications>
+		<artifact name="cluster-play-frontend_2.11" type="pom" ext="pom" conf="pom"/>
+		<artifact name="cluster-play-frontend_2.11" type="jar" ext="jar" conf="compile"/>
+		<artifact name="cluster-play-frontend_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="cluster-play-frontend_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.11" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.11" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="your.organization" name="cluster-api_2.11" rev="2.4.20" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="twirl-api_2.11" rev="1.1.1" conf="compile->default(compile)"/>
+		<dependency org="org.aspectj" name="aspectjweaver" rev="1.8.10" conf="aspectj-runner->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-server_2.11" rev="2.4.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-test_2.11" rev="2.4.6" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-omnidoc_2.11" rev="2.4.6" conf="docs->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-netty-server_2.11" rev="2.4.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-actor_2.11" rev="2.4.20" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-cluster_2.11" rev="2.4.20" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-cluster-metrics_2.11" rev="2.4.20" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-slf4j_2.11" rev="2.4.20" conf="compile->default(compile)"/>
+		<dependency org="com.google.guava" name="guava" rev="18.0" conf="compile->default(compile)"/>
+		<dependency org="org.webjars" name="requirejs" rev="2.1.11-1" conf="compile->default(compile)"/>
+		<dependency org="org.webjars" name="underscorejs" rev="1.6.0-3" conf="compile->default(compile)"/>
+		<dependency org="org.webjars" name="jquery" rev="1.11.1" conf="compile->default(compile)"/>
+		<dependency org="org.webjars" name="d3js" rev="3.4.9" conf="compile->default(compile)"/>
+		<dependency org="org.webjars" name="bootstrap" rev="3.2.0" conf="compile->default(compile)">
+			<exclude org="org.webjars" module="jquery" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.webjars" name="bootswatch-yeti" rev="3.2.0" conf="compile->default(compile)">
+			<exclude org="org.webjars" module="jquery" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.webjars" name="angularjs" rev="1.2.16-2" conf="compile->default(compile)">
+			<exclude org="org.webjars" module="jquery" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.4" conf="test->default(compile)"/>
+		<dependency org="org.scalatestplus" name="play_2.11" rev="1.4.0-M3" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-testkit_2.11" rev="2.4.20" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.play" name="filters-helpers_2.11" rev="2.4.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.4.6" conf="compile->default(compile)"/>
+		<dependency org="io.kamon" name="kamon-core_2.11" rev="0.6.6" conf="compile->default(compile)"/>
+		<dependency org="io.kamon" name="kamon-jmx_2.11" rev="0.6.6" conf="compile->default(compile)"/>
+		<dependency org="io.kamon" name="kamon-akka-2.4_2.11" rev="0.6.6" conf="compile->default(compile)"/>
+		<dependency org="io.kamon" name="kamon-akka-http_2.11" rev="0.6.6" conf="compile->default(compile)"/>
+	</dependencies>
+</ivy-module>

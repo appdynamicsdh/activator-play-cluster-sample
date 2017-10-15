@@ -2,8 +2,8 @@ import NativePackagerHelper._
 
 val commonSettings = Seq(
   organization := "your.organization",
-  version := "2.4.3",
-  scalaVersion := "2.11.7",
+  version := "2.4.20",
+  scalaVersion := "2.11.11",
   //scalaVersion := "2.10.4",
   
   // build info
@@ -20,12 +20,15 @@ lazy val root = (project in file("."))
     name := "play-akka-cluster"
   )
   .aggregate(api, frontend, backend)
+
+val kamonVersion = "0.6.6"
   
 lazy val frontend = (project in file("frontend"))
     .enablePlugins(PlayScala, BuildInfoPlugin, JavaAppPackaging)
     .settings(
         name := "cluster-play-frontend",
         libraryDependencies ++= (Dependencies.frontend  ++ Seq(filters, cache)),
+	libraryDependencies ++= Seq( "io.kamon" %% "kamon-core" % "0.6.6", "io.kamon" %% "kamon-jmx" % "0.6.6","io.kamon" %% "kamon-akka-2.4" % "0.6.6","io.kamon" %% "kamon-akka-http" % "0.6.6"),
         pipelineStages := Seq(rjs, digest, gzip),
         RjsKeys.paths += ("jsRoutes" -> ("/jsroutes" -> "empty:")),
         javaOptions ++= Seq(
@@ -45,6 +48,7 @@ lazy val backend = (project in file("backend"))
     .settings(
         name := "cluster-akka-backend",
         libraryDependencies ++= Dependencies.backend,
+	libraryDependencies ++= Seq("io.kamon" %% "kamon-core" % "0.6.5",  "io.kamon" %% "kamon-jmx" % "0.6.5"),
         javaOptions ++= Seq(
             "-Djava.library.path=" + (baseDirectory.value / "sigar").getAbsolutePath,
             "-Xms128m", "-Xmx1024m"),

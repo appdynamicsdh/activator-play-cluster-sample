@@ -4,6 +4,7 @@ import play.filters.gzip.GzipFilter
 import play.api.libs.concurrent.Akka
 import actors.services.FactorialService
 
+
 object Global extends WithFilters(new GzipFilter(shouldGzip =
   (request, response) => {
     val contentType = response.headers.get("Content-Type")
